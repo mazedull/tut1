@@ -10,7 +10,7 @@ public class Greeter {
 
   public Greeter(String language, String country, String name) {
     locale = new Locale(language, country);
-    this.name = name;
+    this.name = name.toUpperCase();
   }
 
   public String sayHello() {
