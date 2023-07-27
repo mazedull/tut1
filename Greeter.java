@@ -10,12 +10,12 @@ public class Greeter {
 
   public Greeter(String language, String country, String name) {
     locale = new Locale(language, country);
-    this.name = name.toUpperCase();
+    this.name = name;
   }
 
   public String sayHello() {
     ResourceBundle messages = ResourceBundle.getBundle("MessagesBundle", locale);
-    return messages.getString("greeting") + ", " + name;
+    return messages.getString("greeting") + ", " + name.toUpperCase();
   }
 
   public static void main(String[] args) {
